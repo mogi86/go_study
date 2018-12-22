@@ -1,0 +1,6 @@
+---
+- hosts: go
+  connection: docker
+  roles:
+    - yum
+    - go

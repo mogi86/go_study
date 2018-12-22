@@ -1,0 +1,8 @@
+version: "2"
+services:
+  go_web:
+    build: ./docker/go
+    container_name: go_study
+    volumes:
+      - ./go:/var/www/go
+    tty: true
