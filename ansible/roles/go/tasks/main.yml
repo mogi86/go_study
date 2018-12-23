@@ -41,11 +41,17 @@
 
 - name: create path for go get
   file:
-    path: /var/www/go_get
+    path: /var/www/go_get/bin
     state: directory
 
 - name: add GOPATH
   lineinfile: >
     dest="/etc/profile"
     line="export GOPATH=/var/www/go_get"
+  tags: go
+
+- name: add GOPATH/bin to PATH
+  lineinfile: >
+    dest="/etc/profile"
+    line="export PATH=$GOPATH/bin:$PATH"
   tags: go
