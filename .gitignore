@@ -1,1 +1,6 @@
 site.retry
+go/bin/*
+!go/bin/.gitkeep
+go/pkg/*
+!go/pkg/.gitkeep
+go/src/github.com/

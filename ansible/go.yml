@@ -5,3 +5,4 @@
     - yum
     - timezone
     - go
+    - go_get

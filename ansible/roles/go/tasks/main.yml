@@ -39,15 +39,15 @@
   shell: /bin/bash -lc "source /etc/profile"
   tags: go
 
-- name: create path for go get
-  file:
-    path: /var/www/go_get/bin
-    state: directory
+#- name: create path for go get
+#  file:
+#    path: /var/www/go_get/bin
+#    state: directory
 
 - name: add GOPATH
   lineinfile: >
     dest="/etc/profile"
-    line="export GOPATH=/var/www/go_get"
+    line="export GOPATH=/var/www/go"
   tags: go
 
 - name: add GOPATH/bin to PATH
