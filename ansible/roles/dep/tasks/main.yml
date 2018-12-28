@@ -1,0 +1,5 @@
+- name: dep ensure
+  shell: /bin/bash -lc "dep ensure"
+  args:
+    chdir: /var/www/go/src/mygo
+  tags: dep

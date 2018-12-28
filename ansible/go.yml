@@ -6,3 +6,4 @@
     - timezone
     - go
     - go_get
+    - dep
