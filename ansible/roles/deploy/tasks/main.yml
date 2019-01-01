@@ -16,7 +16,7 @@
   file:
     path: /var/www/go
     state: directory
-    owner: "{{ user }}"
-    group: "{{ user }}"
+    owner: "{{ app.user }}"
+    group: "{{ app.user }}"
     recurse: yes
   tags: deploy
