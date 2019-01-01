@@ -7,3 +7,4 @@
     - go
     - go_get
     - dep
+    - go_install

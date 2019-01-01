@@ -1,0 +1,8 @@
+- name: go install
+  shell: /bin/bash -lc "go install"
+  args:
+    chdir: "/var/www/go/src/{{ item }}"
+  with_items:
+    - mygo
+    - web
+  tags: go_install
