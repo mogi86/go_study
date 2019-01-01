@@ -1,0 +1,22 @@
+- name: git clone
+  git:
+    repo: https://{{ git.username }}:{{ git.password }}@github.com/mogi86/go_study
+    dest: /tmp/go_study
+  tags: deploy
+
+- name: copy source(mygo)
+  shell: /bin/bash -lc "cp -r /tmp/go_study/go/src/mygo /var/www/go/src/"
+  tags: deploy
+
+- name: copy source(mygo)
+  shell: /bin/bash -lc "cp -r /tmp/go_study/go/src/web /var/www/go/src/"
+  tags: deploy
+
+- name: change directory permission
+  file:
+    path: /var/www/go
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    recurse: yes
+  tags: deploy

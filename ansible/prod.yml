@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  become: true
+  roles:
+    - yum
+    - timezone
+    - go
+    - go_get
+    - deploy
+    - dep
