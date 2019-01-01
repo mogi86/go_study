@@ -37,3 +37,16 @@ $ docker exec -it go_study /bin/bash --login
 $ cd /path/to/go_study/
 $ ansible-playbook -i ansible/inventories/prod prod.yml
 ```
+
+## GCP環境構築(prod)
+
+### exce provisioning
+
+* git上の以下のファイルの値をマスキングしているので、実行時に書き換える。
+    * `ansible/inventories/prod/hosts`のホスト名(IPアドレス)
+    * `ansible/roles/deploy/vars/main.yml`のgitのパスワード
+
+```
+$ cd /path/to/go_study/
+$ ansible-playbook -i ansible/inventories/prod_gcp prod_gcp.yml
+```
