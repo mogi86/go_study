@@ -43,7 +43,7 @@ $ ansible-playbook -i ansible/inventories/prod prod.yml
 ### exce provisioning
 
 * git上の以下のファイルの値をマスキングしているので、実行時に書き換える。
-    * `ansible/inventories/prod/hosts`のホスト名(IPアドレス)
+    * `ansible/inventories/prod_gcp/hosts`のホスト名(IPアドレス)
     * `ansible/roles/deploy/vars/main.yml`のgitのパスワード
 
 ```
