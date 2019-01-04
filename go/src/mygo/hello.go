@@ -6,6 +6,7 @@ import (
 	"mygo/array"
 	"mygo/construction"
 	"mygo/variable_length"
+	"mygo/maps"
 )
 
 func main() {
@@ -22,4 +23,7 @@ func main() {
 	//可変長引数
 	variable_length.PrintVariableLength("hoge", "fuga")
 	variable_length.PrintRange(1, 3, 5, 7, 9)
+
+	//maps
+	maps.PrintMaps()
 }
