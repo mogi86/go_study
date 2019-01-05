@@ -26,4 +26,5 @@ func main() {
 
 	//maps
 	maps.PrintMaps()
+	maps.IsExists("hoge2")
 }
