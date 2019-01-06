@@ -7,6 +7,7 @@ import (
 	"mygo/construction"
 	"mygo/variable_length"
 	"mygo/maps"
+	"mygo/closure"
 )
 
 func main() {
@@ -27,4 +28,14 @@ func main() {
 	//maps
 	maps.PrintMaps()
 	maps.IsExists("hoge2")
+
+	//クロージャー
+	func1 := closure.PrintClosure(100)
+	func1()
+	func1()
+	func1()
+	func2 := closure.PrintClosure(200)
+	func2()
+	func2()
+	func2()
 }
